@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="publicview.master.cs" Inherits="furnitur_website2.publicview" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial scale=1.0" />
+    <link href="bootstrap-4.5.2-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap-4.5.2-dist/js/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-4.5.2-dist/js/bootstrap.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1>WOODSTOCK</h1>
+            <p>THE FURNITURE THAT DEFINES YOU</p>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a class="navbar-brand" href="Homepage(public).aspx">HOME</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="customerlogin.aspx">LOGIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ABOUT US </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CustomerSignup.aspx">New user!? </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adminlogin.aspx">admin? </a>
+                        </li>
+
+                     
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">PRODUCTS
+                                </a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">BEDS</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">queensize beds</a>
+                                    <a class="dropdown-item" href="#">kingsize beds</a>
+                                    <a class="dropdown-item" href="#">single beds</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="Tables(public).aspx">TABLES</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">coffee table</a>
+                                    <a class="dropdown-item" href="#">end table</a>
+                                    <a class="dropdown-item" href="#">console table</a>
+                                    <a class="dropdown-item" href="#">study table</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="Chairs(productview)public.aspx">CHAIRS</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">arm chair</a>
+                                    <a class="dropdown-item" href="#">lounge chair</a>
+                                    <a class="dropdown-item" href="#">rocking chair </a>
+                                    <a class="dropdown-item" href="#">barrel chair </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">SOFA</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">1-seater sofa </a>
+                                    <a class="dropdown-item" href="#">2-seater sofa </a>
+                                    <a class="dropdown-item" href="#">3-seater sofa </a>
+                                    <a class="dropdown-item" href="#">sofa set </a>
+
+
+                                </div>
+                            </li>
+                        
+                        
+                           
+                    </ul>
+                    
+                </div>
+                 <div class="float-right">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/viewcart.aspx" CssClass="text-decoration-none">
+                    <span style="font-size:large;color:dimgray;">My Cart</span>
+                    <asp:Image ID="ImgCart" runat="server" ImageUrl="~/images/cart-icon.png" />
+                    <asp:Label ID="Lblcount" runat="server" Text=""></asp:Label>
+                        </asp:HyperLink>
+                </div>
+               
+            </nav>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <div class="jumbotron text-center" style="margin-bottom: 0">
+                <p class="pull-right"><a href="Homepage.aspx"></a>back to top </p>
+                <p>
+                    &copy;2020woodstock.in &middot;<a href="#">About us </a>
+
+                </p>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Customer.master.cs" Inherits="furnitur_website2.Customer" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial scale=1.0" />
+    <link href="bootstrap-4.5.2-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap-4.5.2-dist/js/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-4.5.2-dist/js/bootstrap.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <h1>WOODSTOCK</h1>
+            <p>THE FURNITURE THAT DEFINES YOU</p>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a class="navbar-brand" href="Homepage(public).aspx">HOME</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                         
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">link</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#">link</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="adminhome.aspx" id="navbardrop" data-toggle="dropdown">Profile
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="Viewcustomerprofile.aspx">View Profile</a>                               
+                                <a class="dropdown-item" href="editprofile.aspx">Edit Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="customerlogin.aspx">Switch Admins</a>
+                                <a class="dropdown-item" href="customerchangepassword.aspx">Change Password</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="customerlogout.aspx">logout</a>
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+                           
+                    </ul>
+                </div>
+                 <div class="float-right">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/viewcart.aspx" CssClass="text-decoration-none">
+                    <span style="font-size:large;color:dimgray;">My Cart</span>
+                    <asp:Image ID="ImgCart" runat="server" ImageUrl="~/images/cart-icon.png" />
+                    <asp:Label ID="Lblcount" runat="server" Text=""></asp:Label>
+                        </asp:HyperLink>
+                </div>
+                
+            </nav>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

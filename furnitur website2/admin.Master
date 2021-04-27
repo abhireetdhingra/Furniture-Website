@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="furnitur_website2.admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial scale=1.0" />
+    <link href="bootstrap-4.5.2-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap-4.5.2-dist/js/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-4.5.2-dist/js/bootstrap.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+             <h1>WOODSTOCK</h1>
+            <p>THE FURNITURE THAT DEFINES YOU</p>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a class="navbar-brand" href="Homepage(public).aspx">HOME</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">Categories
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="AddCategory.aspx">Add Categories</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="Viewcategories.aspx">View Categories</a>                               
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop3" data-toggle="dropdown">Brand
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="Addbrands.aspx">Add brands</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="View brands.aspx">View brands</a>                               
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop4" data-toggle="dropdown">Primary Material
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="Addprimarymaterial.aspx">Add material</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="Viewallmaterials.aspx">View material</a>                               
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">Products
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="addproduct.aspx">Add Products</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="Viewproducts.aspx">View Products</a>                               
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">link</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="adminhome.aspx" id="navbardrop" data-toggle="dropdown">Admin
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Switch Admins</a>
+                                <a class="dropdown-item" href="adminchangepass2.aspx">Change Password</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="adminlogout.aspx">logout</a>
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+                           
+                    </ul>
+                </div>
+                
+            </nav>
+           
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        
+    </form>
+     
+</body>
+</html>
